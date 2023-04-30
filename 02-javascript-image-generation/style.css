@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #140087;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,6 +16,8 @@ svg {
   top: 0;
   left: 0;
   z-index: -10;
+  opacity: 0.5;
+  
 }
 
 header {
@@ -27,16 +29,37 @@ header {
   justify-content: center;
 }
 
+.images-section {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.image-container {
+  width: 48%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: rgb(38, 51, 77) 0 20px 30px -10px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
 .bottom-section {
   width: 100%;
   display: flex;
   justify-content: center;
   height: 150px;
+  padding: 32px 0;
 }
 
 .input-container {
   width: 100%;
-  max-width: 650px;
+  max-width: 800px;
   position: relative;
 }
 
@@ -46,12 +69,18 @@ input {
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: rgb(0, 0, 0) 0 20px 30px -10px;
+  box-shadow: rgb(38, 51, 77) 0 20px 30px -10px;
   box-sizing: border-box;
+  padding-right: 100px;
 }
 
 #submit {
   position: absolute;
   top: 12px;
   right: 24px;
+  cursor: pointer;
+}
+
+.disabled {
+  cursor: not-allowed !important;
 }
